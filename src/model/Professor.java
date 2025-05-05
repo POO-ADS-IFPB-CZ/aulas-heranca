@@ -18,4 +18,14 @@ public class Professor extends Funcionario {
     public void setFormacao(String formacao) {
         this.formacao = formacao;
     }
+
+    @Override
+    public float getSalario(){
+        if(formacao.equals("Mestrado"))
+            return super.getSalario()+1000;
+        if(formacao.equals("Doutorado"))
+            return super.getSalario()+2000;
+        return super.getSalario();
+    }
+
 }

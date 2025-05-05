@@ -9,10 +9,22 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        Pessoa pessoa1 = new Aluno("111.111.111-01", "João",
-                LocalDate.now(), 123, "ADS");
-        Pessoa pessoa2 = new Professor("222.222.222-02",
+        Professor professor = new Professor("222.222.222-02",
                 "Maria", LocalDate.now(), 3000,
                 "Mestrado");
+        TecnicoAdministrativo tecnico1 = new TecnicoAdministrativo(
+                "111.111.111-01", "Pedro", LocalDate.now(),
+                2000, "Laboratório de Química"
+        );
+        TecnicoAdministrativo tecnico2 = new TecnicoAdministrativo(
+                "111.111.111-01", "José", LocalDate.now(),
+                2000, "Protocolo"
+        );
+
+        System.out.println(professor.getSalario());
+        System.out.println(tecnico1.getSalario());
+        System.out.println(tecnico2.getSalario());
+
+
     }
 }
