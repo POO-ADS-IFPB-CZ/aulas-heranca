@@ -2,44 +2,15 @@ package model;
 
 import java.time.LocalDate;
 
-public class TecnicoAdministrativo {
+public class TecnicoAdministrativo extends Pessoa {
 
-    private String cpf;
-    private String nome;
-    private LocalDate nascimento;
     private float salario;
     private String setor;
 
     public TecnicoAdministrativo(String cpf, String nome, LocalDate nascimento, float salario, String setor) {
-        this.cpf = cpf;
-        this.nome = nome;
-        this.nascimento = nascimento;
+        super(cpf, nome, nascimento);
         this.salario = salario;
         this.setor = setor;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public LocalDate getNascimento() {
-        return nascimento;
-    }
-
-    public void setNascimento(LocalDate nascimento) {
-        this.nascimento = nascimento;
     }
 
     public float getSalario() {
