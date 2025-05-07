@@ -24,10 +24,10 @@ public class Professor extends Funcionario {
     public float getSalario(){
         //TODO: Atualizar para switch/case
         if(formacao == Formacao.Mestrado)
-            return super.getSalario()+1000;
+            return salario+1000;
         if(formacao == Formacao.Doutorado)
-            return super.getSalario()+2000;
-        return super.getSalario();
+            return salario+2000;
+        return salario;
     }
 
 }
