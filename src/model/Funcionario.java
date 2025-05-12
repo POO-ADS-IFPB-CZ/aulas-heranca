@@ -1,20 +1,31 @@
 package model;
 
-import java.time.LocalDate;
+public abstract class Funcionario {
 
-public abstract class Funcionario extends Pessoa{
+    private String cpf;
+    private String nome;
 
-    protected float salario;
-
-    public Funcionario(String cpf, String nome,
-           LocalDate nascimento, float salario){
-        super(cpf, nome, nascimento);
-        this.salario = salario;
+    public Funcionario(String cpf, String nome) {
+        this.cpf = cpf;
+        this.nome = nome;
     }
 
-    public abstract float getSalario();
-
-    public void setSalario(float salario) {
-        this.salario = salario;
+    public String getCpf() {
+        return cpf;
     }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public abstract double calcularPagamento();
+
 }
